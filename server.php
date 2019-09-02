@@ -84,12 +84,8 @@
            }  
       });
 
-    
 
      //table data
-
-
-
 
       function fetch_data()  
       {  
@@ -103,7 +99,7 @@
       }  
       fetch_data();  
      
-     
+          
      $(document).on('click', '#edit', function(){  
            var id=$(this).data("id8");   
                var $this = $(this);

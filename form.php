@@ -31,14 +31,14 @@
     <form method='post' action='insert.php'>
         <input type="text" id="name" name= "name" placeholder='enter movie name' />
         <!-- <input type="text" id= "actorslist" name= "actorslist" placeholder='enter actors names' /> -->
-        <select name="actorslist" id="actorslist" > <!-- multiple="multiple" -->  <option>select actorsname</option>
+        <select name="actorslist" id="actorslist" > <!-- multiple="multiple" -->  <option>select actor name</option>
         <?php
 
-    if($stmt = $conn->query("SELECT actorslist from movie"))
+    if($stmt = $conn->query("SELECT name from actor"))
     {
         while($row = $stmt->fetch_assoc()) {
             ?>
-            <option value="<?php echo $row['actorslist']?>"><?php echo $row['actorslist']?></option>
+            <option value="<?php echo $row['name']?>"><?php echo $row['name']?></option>
             
       <?php  }}
     ?> 
@@ -49,7 +49,7 @@
         <select name="genre" id="genre"> <option>select genres</option>
         <?php
 
-if($stmt = $conn->query("SELECT genre from movie"))
+if($stmt = $conn->query("SELECT genre from genre"))
 {
     while($row = $stmt->fetch_assoc()) {
         ?>
