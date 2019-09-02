@@ -5,7 +5,7 @@
         echo 'database connection error';
     }
 
-    $stmt = $con->prepare("INSERT INTO actor (actorname) VALUES (?)");
+    $stmt = $con->prepare("INSERT INTO actor (name) VALUES (?)");
 
     $stmt->bind_param("s",$name);
 
